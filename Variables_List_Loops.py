@@ -23,6 +23,47 @@ print(list_data)
 tupple1 = (("cicd","jenkins"),("security","fortify"))
 print(tupple1)
 
+#region Diff between List and Tupple
+
+In Python, both lists and tuples are used to store collections of items, but there are some key differences between them:
+
+Mutability:
+
+List: Lists are mutable, which means you can modify their contents by adding or removing elements, or by changing the values of existing elements.
+Tuple: Tuples, on the other hand, are immutable. Once a tuple is created, you cannot change its values or size. You can't add, remove, or modify elements in a tuple.
+Syntax:
+
+List: Lists are created using square brackets [].
+python
+Copy code
+my_list = [1, 2, 3, 4]
+Tuple: Tuples are created using parentheses ().
+python
+Copy code
+my_tuple = (1, 2, 3, 4)
+Performance:
+
+List: Because of their mutability, lists may require more memory and can be slightly slower than tuples.
+Tuple: Tuples, being immutable, are generally more memory-efficient and may offer better performance in certain situations.
+Use Cases:
+
+List: Use lists when you have a collection of items that might need to be modified during the program's execution, such as when you are working with a dynamic dataset.
+Tuple: Use tuples when you want to create a collection of items that should remain constant throughout the program, or when you want to ensure data integrity and prevent accidental modification.
+Here's a simple example to illustrate the difference:
+
+python
+Copy code
+# List example
+my_list = [1, 2, 3, 4]
+my_list[0] = 99  # Valid - lists are mutable
+
+# Tuple example
+my_tuple = (1, 2, 3, 4)
+# The following line would result in an error because tuples are immutable
+# my_tuple[0] = 99
+In summary, choose between lists and tuples based on your requirements for mutability and the specific characteristics of the data you are working with.
+# endregion
+
 
 #Initial value: 10
 #Last value: 30
