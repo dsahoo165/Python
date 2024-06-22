@@ -14,6 +14,12 @@ void half_pyramid_right_print_row_numbers();
 void inverted_half_pyramid_row_numbers();
 void Floyds_Triangle();
 void Butterfly_Pattern();
+void Pattern_01();
+void Solid_Rohmbus_Pattern();
+void Number_Triangle();
+void Pallindromic_Pattern();
+void Star_Pattern();
+void ZigZagPattern();
 
 
 
@@ -31,7 +37,13 @@ int main()
 	//half_pyramid_right_print_row_numbers();
 	//inverted_half_pyramid_row_numbers();
 	//Floyds_Triangle();
-	 Butterfly_Pattern();
+	//Butterfly_Pattern();
+	//Pattern_01();
+	//Solid_Rohmbus_Pattern();
+	//Number_Triangle();
+	//Pallindromic_Pattern();
+	//Star_Pattern();
+	ZigZagPattern();
 	
 
 	// Pause the program before exiting
@@ -278,6 +290,166 @@ void Butterfly_Pattern()
 		for (int j = 1; j <= i; j++)
 		{
 			cout << "*";
+		}
+		cout << endl;
+	}
+}
+
+void Pattern_01()
+{
+	int row;
+
+	cout << "Enter number : ";
+	cin >> row;
+
+	for (int i = 1; i <= row; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			if ((i+j)%2 == 0)			
+				cout << "1";			
+			else
+				cout << "0";
+			
+		}
+		cout << endl;
+	}
+}
+
+void Solid_Rohmbus_Pattern()
+{
+	int row;
+
+	cout << "Enter number : ";
+	cin >> row;
+
+	for (int i = 1; i <= row; i++)
+	{
+		int spaces = (row - i);
+		for (int j = 1; j <= spaces; j++)
+		{
+			cout << " ";
+		}
+
+		for (int j = 1; j <= row; j++)
+		{
+			cout << "*";		
+		}
+		cout << endl;
+	}
+}
+
+void Number_Triangle()
+{
+	int row;
+
+	cout << "Enter number : ";
+	cin >> row;
+
+	for (int i = 1; i <= row; i++)
+	{
+		int spaces = (row - i);
+		for (int j = 1; j <= spaces; j++)
+		{
+			cout << " ";
+		}
+
+		for (int j = 1; j <= i; j++)
+		{
+			// This space is req to form the structure
+			cout << j << " ";
+		}
+
+		cout << endl;
+	}
+}
+
+void Pallindromic_Pattern()
+{
+	int row;
+
+	cout << "Enter number : ";
+	cin >> row;
+
+	for (int i = 1; i <= row; i++)
+	{
+		int spaces = (row - i);
+		for (int j = 1; j <= spaces; j++)
+		{
+			cout << " ";
+		}
+
+		for (int j = i; j >= 1; j--)
+		{			
+			cout << j;
+		}
+
+		for (int j = 2; j <= i; j++)
+		{			
+			cout << j;
+		}
+		cout << endl;
+	
+	}
+
+	
+}
+
+void Star_Pattern()
+{
+	int row;
+
+	cout << "Enter number : ";
+	cin >> row;
+
+	for (int i = 1; i <= row; i++)
+	{
+		int spaces = (row - i);
+		for (int j = 1; j <= spaces; j++)
+		{
+			cout << " ";
+		}
+
+		for (int j = 1; j <= 2 * i - 1; j++)
+		{			
+			cout << "*";
+		}		
+
+		cout << endl;
+	}
+	for (int i = row; i >= 1; i--)
+	{
+		int spaces = (row - i);
+		for (int j = 1; j <= spaces; j++)
+		{
+			cout << " ";
+		}
+
+		for (int j = 1; j <= 2*i-1; j++)
+		{			
+			cout << "*";
+		}		
+
+		cout << endl;
+	}
+}
+
+void ZigZagPattern()
+{
+	int n;
+
+	cout << "Enter number : ";
+	cin >> n;
+
+	for (int i = 1; i <= 3; i++)
+	{
+		for (int j = 1; j <= n; j++)
+		{
+			if (((i + j) % 4 == 0) || (i == 2 && j%4 == 0))
+				cout << "*";
+			else
+				cout << " ";
+
 		}
 		cout << endl;
 	}
